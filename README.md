@@ -1,6 +1,6 @@
 # Mixtape Desktop Synthesizer
 
-<img src="mixtape_image1.png"  />
+<img src="images/mixtape_image1.png"  />
 
 ### Thank you for checking out this Proof of Concept (POC)!
 
@@ -46,4 +46,4 @@ The scripts are a work in progress. Currently, readxml_measure.pl seems to be th
 > ./convert/readxml_measure.pl sampleXML/odetojoy.xml > ode.txt
 ```
 
-Then upload the ode.txt file to mixtape with your serial terminal. Please see the file "mixtape_instructions.pdf" for more information.
+Then upload the ode.txt file to mixtape with your serial terminal. Please see the file "manual/mixtape_instructions.pdf" for more information.
