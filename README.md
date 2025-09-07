@@ -1,6 +1,6 @@
 # Mixtape Desktop Synthesizer
 
-<img src="/https://github.com/ramonricca/mixtape/blob/main/mixtape_image1.png"  />
+<img src="mixtape_image1.png"  />
 
 ### Thank you for checking out this Proof of Concept (POC)!
 
