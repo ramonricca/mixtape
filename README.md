@@ -42,8 +42,8 @@ The scripts are a work in progress. Currently, readxml_measure.pl seems to be th
 ```
 > git clone http://github.com/ramonricca/mixtape
 > cd mixtape
-> chmod u+x scripts/*.pl
-> ./scripts/readxml_measure.pl sampleXML/odetojoy.xml > ode.txt
+> chmod u+x convert/*.p*
+> ./convert/readxml_measure.pl sampleXML/odetojoy.xml > ode.txt
 ```
 
 Then upload the ode.txt file to mixtape with your serial terminal. Please see the file "mixtape_instructions.pdf" for more information.

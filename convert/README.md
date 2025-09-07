@@ -24,14 +24,14 @@ The scripts are a work in progress. Currently, readxml_measure.pl seems to be th
 ```
 > git clone http://github.com/ramonricca/mixtape
 > cd mixtape
-> chmod u+x scripts/*.pl
-> ./scripts/readxml_measure.pl sampleXML/odetojoy.xml > ode.txt
+> chmod u+x convert/*.p*
+> ./convert/readxml_measure.pl sampleXML/odetojoy.xml > ode.txt
 ```
 
 The readxml_timepart.pl script can be used on musicxml files that have parts separated like P1 P2 etc. Sometimes this happens when different musical instruments are represented on different staffs. To use it try:
 
 ```
-> ./scripts/readxml_timepart.pl musicfile.xml P1 > musicfile.txt
+> ./convert/readxml_timepart.pl musicfile.xml P1 > musicfile.txt
 ````
 
 
