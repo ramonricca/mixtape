@@ -1,403 +1,0 @@
-Script started on 2025-09-07 12:02:48-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="272" LINES="61"]
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ cd convert/
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ ls
-[?2004l[0m[01;32mget_beats.pl[0m  [01;32mmultipart2mixtape.pl[0m  [01;32mmusicxml2mixtape.pl[0m  [01;32mparse_voices.pl[0m  README.md  [01;32mreadxml_chord.pl[0m  [01;32mreadxml_measure.pl[0m  [01;32mreadxml.pl[0m  [01;32mreadxml_timepart.pl[0m  [01;32msingle2mixtape.pl[0m  [01;32mtestxml.pl[0m
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ cp ~/sounds/*/[K.py .
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ l s[K[Ks -ltr
-[?2004ltotal 116
--rwxr--r-- 1 rricca rricca   656 Sep  7 10:59 [0m[01;32mget_beats.pl[0m
--rw-r--r-- 1 rricca rricca  1246 Sep  7 10:59 README.md
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmultipart2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmusicxml2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  2253 Sep  7 10:59 [01;32mparse_voices.pl[0m
--rwxr--r-- 1 rricca rricca  1481 Sep  7 10:59 [01;32mreadxml.pl[0m
--rwxr--r-- 1 rricca rricca  1499 Sep  7 10:59 [01;32mreadxml_chord.pl[0m
--rwxr--r-- 1 rricca rricca  6072 Sep  7 10:59 [01;32mreadxml_measure.pl[0m
--rwxr--r-- 1 rricca rricca 11955 Sep  7 10:59 [01;32mreadxml_timepart.pl[0m
--rwxr--r-- 1 rricca rricca 12974 Sep  7 10:59 [01;32msingle2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca   269 Sep  7 10:59 [01;32mtestxml.pl[0m
--rwxrw-r-- 1 rricca rricca  5075 Sep  7 12:03 [01;32mmidi2mixtape.py[0m
--rwxr--r-- 1 rricca rricca   594 Sep  7 12:03 [01;32mmidi2xml.py[0m
--rwxr--r-- 1 rricca rricca  1076 Sep  7 12:03 [01;32mmusicxml_parser2.py[0m
--rwxr--r-- 1 rricca rricca  1825 Sep  7 12:03 [01;32mmusicxml_parser.py[0m
--rwxr--r-- 1 rricca rricca  2012 Sep  7 12:03 [01;32mparse_musicxml_nextgen.py[0m
--rwxrw-r-- 1 rricca rricca   570 Sep  7 12:03 [01;32mpcm.py[0m
--rw-rw-r-- 1 rricca rricca  1541 Sep  7 12:03 score2mixtape_expt1.py
--rwxr--r-- 1 rricca rricca   396 Sep  7 12:03 [01;32mtestmusic21-2.py[0m
--rwxr--r-- 1 rricca rricca   119 Sep  7 12:03 [01;32mtestmusic21.py[0m
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ chmod u+x *
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ chmod u-x Re[KA[KEADME.md 
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ ls -al
-[?2004ltotal 124
-drwxr-xr-x 2 rricca rricca  4096 Sep  7 12:03 [0m[01;34m.[0m
-drwxrwxr-x 6 rricca rricca  4096 Sep  7 12:02 [01;34m..[0m
--rwxr--r-- 1 rricca rricca   656 Sep  7 10:59 [01;32mget_beats.pl[0m
--rwxrw-r-- 1 rricca rricca  5075 Sep  7 12:03 [01;32mmidi2mixtape.py[0m
--rwxr--r-- 1 rricca rricca   594 Sep  7 12:03 [01;32mmidi2xml.py[0m
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmultipart2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmusicxml2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  1076 Sep  7 12:03 [01;32mmusicxml_parser2.py[0m
--rwxr--r-- 1 rricca rricca  1825 Sep  7 12:03 [01;32mmusicxml_parser.py[0m
--rwxr--r-- 1 rricca rricca  2012 Sep  7 12:03 [01;32mparse_musicxml_nextgen.py[0m
--rwxr--r-- 1 rricca rricca  2253 Sep  7 10:59 [01;32mparse_voices.pl[0m
--rwxrw-r-- 1 rricca rricca   570 Sep  7 12:03 [01;32mpcm.py[0m
--rw-r--r-- 1 rricca rricca  1246 Sep  7 10:59 README.md
--rwxr--r-- 1 rricca rricca  1499 Sep  7 10:59 [01;32mreadxml_chord.pl[0m
--rwxr--r-- 1 rricca rricca  6072 Sep  7 10:59 [01;32mreadxml_measure.pl[0m
--rwxr--r-- 1 rricca rricca  1481 Sep  7 10:59 [01;32mreadxml.pl[0m
--rwxr--r-- 1 rricca rricca 11955 Sep  7 10:59 [01;32mreadxml_timepart.pl[0m
--rwxrw-r-- 1 rricca rricca  1541 Sep  7 12:03 [01;32mscore2mixtape_expt1.py[0m
--rwxr--r-- 1 rricca rricca 12974 Sep  7 10:59 [01;32msingle2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca   396 Sep  7 12:03 [01;32mtestmusic21-2.py[0m
--rwxr--r-- 1 rricca rricca   119 Sep  7 12:03 [01;32mtestmusic21.py[0m
--rwxr--r-- 1 rricca rricca   269 Sep  7 10:59 [01;32mtestxml.pl[0m
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ chmod g-w *
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ ls -al
-[?2004ltotal 124
-drwxr-xr-x 2 rricca rricca  4096 Sep  7 12:03 [0m[01;34m.[0m
-drwxrwxr-x 6 rricca rricca  4096 Sep  7 12:02 [01;34m..[0m
--rwxr--r-- 1 rricca rricca   656 Sep  7 10:59 [01;32mget_beats.pl[0m
--rwxr--r-- 1 rricca rricca  5075 Sep  7 12:03 [01;32mmidi2mixtape.py[0m
--rwxr--r-- 1 rricca rricca   594 Sep  7 12:03 [01;32mmidi2xml.py[0m
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmultipart2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmusicxml2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca  1076 Sep  7 12:03 [01;32mmusicxml_parser2.py[0m
--rwxr--r-- 1 rricca rricca  1825 Sep  7 12:03 [01;32mmusicxml_parser.py[0m
--rwxr--r-- 1 rricca rricca  2012 Sep  7 12:03 [01;32mparse_musicxml_nextgen.py[0m
--rwxr--r-- 1 rricca rricca  2253 Sep  7 10:59 [01;32mparse_voices.pl[0m
--rwxr--r-- 1 rricca rricca   570 Sep  7 12:03 [01;32mpcm.py[0m
--rw-r--r-- 1 rricca rricca  1246 Sep  7 10:59 README.md
--rwxr--r-- 1 rricca rricca  1499 Sep  7 10:59 [01;32mreadxml_chord.pl[0m
--rwxr--r-- 1 rricca rricca  6072 Sep  7 10:59 [01;32mreadxml_measure.pl[0m
--rwxr--r-- 1 rricca rricca  1481 Sep  7 10:59 [01;32mreadxml.pl[0m
--rwxr--r-- 1 rricca rricca 11955 Sep  7 10:59 [01;32mreadxml_timepart.pl[0m
--rwxr--r-- 1 rricca rricca  1541 Sep  7 12:03 [01;32mscore2mixtape_expt1.py[0m
--rwxr--r-- 1 rricca rricca 12974 Sep  7 10:59 [01;32msingle2mixtape.pl[0m
--rwxr--r-- 1 rricca rricca   396 Sep  7 12:03 [01;32mtestmusic21-2.py[0m
--rwxr--r-- 1 rricca rricca   119 Sep  7 12:03 [01;32mtestmusic21.py[0m
--rwxr--r-- 1 rricca rricca   269 Sep  7 10:59 [01;32mtestxml.pl[0m
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ cd ..
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ ls
-[?2004l[0m[01;34mconvert[0m  LICENSE  [01;35mmixtape_image1.png[0m  mixtape_instructions.pdf  [01;34mml[0m  README.md  [01;34msampleXML[0m  typescript
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ ls
-[?2004l[0m[01;34mconvert[0m  LICENSE  [01;35mmixtape_image1.png[0m  mixtape_instructions.pdf  [01;34mml[0m  README.md  [01;34msampleXML[0m  typescript
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git add .
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git commit
-[?2004lAuthor identity unknown
-
-*** Please tell me who you are.
-
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'rricca@agilestack.(none)')
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git config --global user.email "ramonricca@gmail.com"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krr[K[Krricca.developer@gmail.com"
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git conif[K[Kgif --globa[K[Kbal user.name "Ramon Ricca"
-[?2004lgit: 'congif' is not a git command. See 'git --help'.
-
-The most similar command is
-	config
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git congif --global user.name "Ramon Ricca"[1P[1P[1P[1@f[1@i[1@g
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git config --global user.name "Ramon Ricca"gif[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfig --global user.email "rricca.developer@gmail.com"mmit[K[1Padd .commit
-[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;61r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[59;130H(B[0;7m[ Reading... ](B[m[59;128H(B[0;7m[ Read 51 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG                                                                                                         [1;271H(B[m[60d(B[0;7m^G(B[m Help[60;19H(B[0;7m^O(B[m Write Out[37G(B[0;7m^W(B[m Where Is[55G(B[0;7m^K(B[m Cut[60;73H(B[0;7m^T(B[m Execute[60;91H(B[0;7m^C(B[m Location[109G(B[0;7mM-U(B[m Undo[60;127H(B[0;7mM-A(B[m Set Mark[145G(B[0;7mM-](B[m To Bracket    (B[0;7mM-Q(B[m Previous[181G(B[0;7m^B(B[m Back[60;199H(B[0;7m^◂(B[m Prev Word[217G(B[0;7m^A(B[m Home[60;235H(B[0;7m^P(B[m Prev Line[253G(B[0;7mM-▴(B[m Scroll Up[61d(B[0;7m^X(B[m Exit[61;19H(B[0;7m^R(B[m Read File[37G(B[0;7m^\(B[m Replace[61;55H(B[0;7m^U(B[m Paste[61;73H(B[0;7m^J(B[m Justify[61;91H(B[0;7m^/(B[m Go To Line     (B[0;7mM-E(B[m Redo[61;127H(B[0;7mM-6(B[m Copy[61;145H(B[0;7m^Q(B[m Where Was[163G(B[0;7mM-W(B[m Next[61;181H(B[0;7m^F(B[m Forward[61;199H(B[0;7m^▸(B[m Next Word[217G(B[0;7m^E(B[m End[61;235H(B[0;7m^N(B[m Next Line[253G(B[0;7mM-▾(B[m Scroll Down[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[38;5;208m       [36mnew file:   convert/README.md[12d#[38;5;208m       [36mnew file:   convert/get_beats.pl[13d#[38;5;208m       [36mnew file:   convert/midi2mixtape.py[14d#[38;5;208m       [36mnew file:   convert/midi2xml.py[15d#[38;5;208m       [36mnew file:   convert/multipart2mixtape.pl[16d#[38;5;208m       [36mnew file:   convert/musicxml2mixtape.pl[17d#[38;5;208m       [36mnew file:   convert/musicxml_parser.py[18d#[38;5;208m       [36mnew file:   convert/musicxml_parser2.py[19d#[38;5;208m       [36mnew file:   convert/parse_musicxml_nextgen.py[20d#[38;5;208m       [36mnew file:   convert/parse_voices.pl[21d#[38;5;208m       [36mnew file:   convert/pcm.py[22d#[38;5;208m       [36mnew file:   convert/readxml.pl[23d#[38;5;208m       [36mnew file:   convert/readxml_chord.pl[24d#[38;5;208m       [36mnew file:   convert/readxml_measure.pl[25d#[38;5;208m       [36mnew file:   convert/readxml_timepart.pl[26d#[38;5;208m       [36mnew file:   convert/score2mixtape_expt1.py[27d#[38;5;208m       [36mnew file:   convert/single2mixtape.pl[28d#[38;5;208m       [36mnew file:   convert/testmusic21-2.py[29d#[38;5;208m       [36mnew file:   convert/testmusic21.py[30d#[38;5;208m       [36mnew file:   convert/testxml.pl[31d#[38;5;208m       [36mnew file:   mixtape_image1.png[32d#[38;5;208m       [36mnew file:   mixtape_instructions.pdf[33d#[38;5;208m       [36mnew file:   ml/README.md[34d#[38;5;208m       [36mnew file:   ml/mixtape_generation_v1.ipynb[35d#[38;5;208m       [36mnew file:   ml/music_generation.ipynb[36d#[38;5;208m       [36mnew file:   ml/music_generation_musicxml-bkp.ipynb[37d#[38;5;208m       [36mnew file:   ml/music_generation_musicxml.ipynb[38d#[38;5;208m       [36mnew file:   ml/music_generation_working.ipynb[39d#[38;5;208m       [36mnew file:   sampleXML/99luft.xml[40d#[38;5;208m       [36mnew file:   sampleXML/README.md[41d#[38;5;208m       [36mnew file:   sampleXML/bach_3part.xml[42d#[38;5;208m       [36mnew file:   sampleXML/eileen.xml[43d#[38;5;208m       [36mnew file:   sampleXML/hallmountain.xml[44d#[38;5;208m       [36mnew file:   sampleXML/lion.xml[45d#[38;5;208m       [36mnew file:   sampleXML/moon_river.xml[46d#[38;5;208m       [36mnew file:   sampleXML/mozart.xml[47d#[38;5;208m       [36mnew file:   sampleXML/odetojoy.xml[48d#[38;5;208m       [36mnew file:   typescript[49d#[50d# Changes not staged for commit:[51d#[38;5;208m       [36mmodified:   typescript[52d#[2d[39m(B[m[?12l[?25h[?25l[1;169H(B[0;7m*[271G(B[m[?12l[?25h[2di[?25l[?12l[?25h[K[?25l[?12l[?25hI[?25l[?12l[?25hn[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25hi[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hc[?25l[?12l[?25ho[?25l[?12l[?25hm[?25l[?12l[?25hm[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25h.[?25l7[3;58r8[3dM[1;61r[3;1H[?12l[?25h[?25l[?12l[?25h[?25l[3;58r[58;1H
-[1;61r[2;16H[?12l[?25h[?25l7[3;59r8[3dM[1;61r[3;1H[?12l[?25h[?25l[59d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                           [60;1H Y(B[m Yes[K[61d(B[0;7m N(B[m No  [61;17H(B[0;7m^C(B[m Cancel[K[59;23H[?12l[?25h[?25l[60d(B[0;7m^G(B[m Help[60;69H(B[0;7mM-D(B[m DOS Format[60;137H(B[0;7mM-A(B[m Append[60;205H(B[0;7mM-B(B[m Backup File[61d(B[0;7m^C(B[m Cancel[17G         [61;69H(B[0;7mM-M(B[m Mac Format[61;137H(B[0;7mM-P(B[m Prepend[61;205H(B[0;7m^T(B[m Browse[59d(B[0;7mFile Name to Write: /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG(B[m[?12l[?25h[?25l[59;129H[1K (B[0;7m[ Writing... ](B[m[K[1;169H(B[0;7m [271G(B[m[59;128H(B[0;7m[ Wrote 52 lines ](B[m[J[61d[?12l[?25h[61;1H[?1049l[23;0;0t[?1l>[?2004l[K[main 33b1856] Initial commit.
- 39 files changed, 59853 insertions(+), 2 deletions(-)
- create mode 100644 convert/README.md
- create mode 100755 convert/get_beats.pl
- create mode 100755 convert/midi2mixtape.py
- create mode 100755 convert/midi2xml.py
- create mode 100755 convert/multipart2mixtape.pl
- create mode 100755 convert/musicxml2mixtape.pl
- create mode 100755 convert/musicxml_parser.py
- create mode 100755 convert/musicxml_parser2.py
- create mode 100755 convert/parse_musicxml_nextgen.py
- create mode 100755 convert/parse_voices.pl
- create mode 100755 convert/pcm.py
- create mode 100755 convert/readxml.pl
- create mode 100755 convert/readxml_chord.pl
- create mode 100755 convert/readxml_measure.pl
- create mode 100755 convert/readxml_timepart.pl
- create mode 100755 convert/score2mixtape_expt1.py
- create mode 100755 convert/single2mixtape.pl
- create mode 100755 convert/testmusic21-2.py
- create mode 100755 convert/testmusic21.py
- create mode 100755 convert/testxml.pl
- create mode 100644 mixtape_image1.png
- create mode 100644 mixtape_instructions.pdf
- create mode 100644 ml/README.md
- create mode 100644 ml/mixtape_generation_v1.ipynb
- create mode 100644 ml/music_generation.ipynb
- create mode 100644 ml/music_generation_musicxml-bkp.ipynb
- create mode 100644 ml/music_generation_musicxml.ipynb
- create mode 100644 ml/music_generation_working.ipynb
- create mode 100644 sampleXML/99luft.xml
- create mode 100644 sampleXML/README.md
- create mode 100644 sampleXML/bach_3part.xml
- create mode 100644 sampleXML/eileen.xml
- create mode 100644 sampleXML/hallmountain.xml
- create mode 100644 sampleXML/lion.xml
- create mode 100644 sampleXML/moon_river.xml
- create mode 100644 sampleXML/mozart.xml
- create mode 100644 sampleXML/odetojoy.xml
- create mode 100644 typescript
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ ls
-[?2004l[0m[01;34mconvert[0m  LICENSE  [01;35mmixtape_image1.png[0m  mixtape_instructions.pdf  [01;34mml[0m  README.md  [01;34msampleXML[0m  typescript
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ man h[Kgh
-[?2004l[?1049h[22;0;0t[?1h=[4mGH[24m(1)                                                                                                                       GitHub CLI manual                                                                                                                       [4mGH[24m(1)[m
-[m
-[1mNAME[0m[m
-       gh - GitHub CLI[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mgh <command> <subcommand> [flags][0m[m
-[m
-[1mDESCRIPTION[0m[m
-       Work seamlessly with GitHub from the command line.[m
-[m
-[1mCORE COMMANDS[0m[m
-       [1mgh-auth(1)[0m[m
-              Authenticate gh and git with GitHub[m
-[m
-       [1mgh-browse(1)[0m[m
-              Open repositories, issues, pull requests, and more in the browser[m
-[m
-       [1mgh-codespace(1)[0m[m
-              Connect to and manage codespaces[m
-[m
-       [1mgh-gist(1)[0m[m
-              Manage gists[m
-[m
-       [1mgh-issue(1)[0m[m
-              Manage issues[m
-[m
-       [1mgh-org(1)[0m[m
-              Manage organizations[m
-[m
-       [1mgh-pr(1)[0m[m
-              Manage pull requests[m
-[m
-       [1mgh-project(1)[0m[m
-              Work with GitHub Projects.[m
-[m
-       [1mgh-release(1)[0m[m
-              Manage releases[m
-[m
-       [1mgh-repo(1)[0m[m
-              Manage repositories[m
-[m
-[1mGITHUB ACTIONS COMMANDS[0m[m
-       [1mgh-cache(1)[0m[m
-              Manage GitHub Actions caches[m
-[m
-       [1mgh-run(1)[0m[m
-              View details about workflow runs[m
-[m
-       [1mgh-workflow(1)[0m[m
-              View details about GitHub Actions workflows[m
-[m
-[1mADDITIONAL COMMANDS[0m[m
-       [1mgh-alias(1)[0m[m
-              Create command shortcuts[m
-[m
-       [1mgh-api(1)[0m[m
-              Make an authenticated GitHub API request[m
-[m
-       [1mgh-attestation(1)[0m[m
-[7m Manual page gh(1) line 1 (press h for help or q to quit)[27m[K[K              Work with artifact attestations[m
-[m
-       [1mgh-completion(1)[0m[m
-              Generate shell completion scripts[m
-[m
-       [1mgh-config(1)[0m[m
-              Manage configuration for gh[m
-[m
-       [1mgh-extension(1)[0m[m
-              Manage gh extensions[m
-[m
-       [1mgh-gpg-key(1)[0m[m
-              Manage GPG keys[m
-[m
-       [1mgh-label(1)[0m[m
-              Manage labels[m
-[m
-       [1mgh-preview(1)[0m[m
-              Execute previews for gh features[m
-[m
-       [1mgh-ruleset(1)[0m[m
-              View info about repo rulesets[m
-[m
-       [1mgh-search(1)[0m[m
-              Search for repositories, issues, and pull requests[m
-[m
-       [1mgh-secret(1)[0m[m
-              Manage GitHub secrets[m
-[m
-       [1mgh-ssh-key(1)[0m[m
-              Manage SSH keys[m
-[m
-       [1mgh-status(1)[0m[m
-              Print information about relevant issues, pull requests, and notifications across repositories[m
-[m
-       [1mgh-variable(1)[0m[m
-              Manage GitHub Actions variables[m
-[m
-[1mOPTIONS[0m[m
-       [1m--version[0m[m
-              Show gh version[m
-[m
-[1mEXIT CODES[0m[m
-       0: Successful execution[m
-[m
-       1: Error[m
-[m
-       2: Command canceled[m
-[m
-       4: Authentication required[m
-[m
-       NOTE: Specific commands may have additional exit codes. Refer to the command's help for more information.[m
-[m
-[1mEXAMPLE[0m[m
-       $ gh issue create[m
-       $ gh repo clone cli/cli[m
-       $ gh pr checkout 321[m
-[m
-GitHub CLI 2.78.0                                                                                                                Aug 2025                                                                                                                           [4mGH[24m(1)[m
-[7m Manual page gh(1) line 60/119 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git push 
-[?2004lUsername for 'https://github.com': ^C
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ man gh
-[?2004l[?1049h[22;0;0t[?1h=[4mGH[24m(1)                                                                                                                       GitHub CLI manual                                                                                                                       [4mGH[24m(1)[m
-[m
-[1mNAME[0m[m
-       gh - GitHub CLI[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mgh <command> <subcommand> [flags][0m[m
-[m
-[1mDESCRIPTION[0m[m
-       Work seamlessly with GitHub from the command line.[m
-[m
-[1mCORE COMMANDS[0m[m
-       [1mgh-auth(1)[0m[m
-              Authenticate gh and git with GitHub[m
-[m
-       [1mgh-browse(1)[0m[m
-              Open repositories, issues, pull requests, and more in the browser[m
-[m
-       [1mgh-codespace(1)[0m[m
-              Connect to and manage codespaces[m
-[m
-       [1mgh-gist(1)[0m[m
-              Manage gists[m
-[m
-       [1mgh-issue(1)[0m[m
-              Manage issues[m
-[m
-       [1mgh-org(1)[0m[m
-              Manage organizations[m
-[m
-       [1mgh-pr(1)[0m[m
-              Manage pull requests[m
-[m
-       [1mgh-project(1)[0m[m
-              Work with GitHub Projects.[m
-[m
-       [1mgh-release(1)[0m[m
-              Manage releases[m
-[m
-       [1mgh-repo(1)[0m[m
-              Manage repositories[m
-[m
-[1mGITHUB ACTIONS COMMANDS[0m[m
-       [1mgh-cache(1)[0m[m
-              Manage GitHub Actions caches[m
-[m
-       [1mgh-run(1)[0m[m
-              View details about workflow runs[m
-[m
-       [1mgh-workflow(1)[0m[m
-              View details about GitHub Actions workflows[m
-[m
-[1mADDITIONAL COMMANDS[0m[m
-       [1mgh-alias(1)[0m[m
-              Create command shortcuts[m
-[m
-       [1mgh-api(1)[0m[m
-              Make an authenticated GitHub API request[m
-[m
-       [1mgh-attestation(1)[0m[m
-[7m Manual page gh(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ gh-auth
-[?2004lgh-auth: command not found
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ gh auth
-[?2004l]11;?\[6n]11;?\[6nAuthenticate gh and git with GitHub
-
-[0;1;39mUSAGE[0m
-  gh auth <command> [flags]
-
-[0;1;39mAVAILABLE COMMANDS[0m
-  login:         Log in to a GitHub account
-  logout:        Log out of a GitHub account
-  refresh:       Refresh stored authentication credentials
-  setup-git:     Setup git with GitHub CLI
-  status:        Display active account and authentication state on each known GitHub host
-  switch:        Switch active GitHub account
-  token:         Print the authentication token gh uses for a hostname and account
-
-[0;1;39mINHERITED FLAGS[0m
-  --help   Show help for command
-
-[0;1;39mLEARN MORE[0m
-  Use `gh <command> <subcommand> --help` for more information about a command.
-  Read the manual at https://cli.github.com/manual
-  Learn about exit codes using `gh help exit-codes`
-  Learn about accessibility experiences using `gh help accessibility`
-
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ a[Kgh auth setup-git
-[?2004l]11;?\[6n]11;?\[6n[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git push
-[?2004lEnumerating objects: 44, done.
-Counting objects:   2% (1/44)Counting objects:   4% (2/44)Counting objects:   6% (3/44)Counting objects:   9% (4/44)Counting objects:  11% (5/44)Counting objects:  13% (6/44)Counting objects:  15% (7/44)Counting objects:  18% (8/44)Counting objects:  20% (9/44)Counting objects:  22% (10/44)Counting objects:  25% (11/44)Counting objects:  27% (12/44)Counting objects:  29% (13/44)Counting objects:  31% (14/44)Counting objects:  34% (15/44)Counting objects:  36% (16/44)Counting objects:  38% (17/44)Counting objects:  40% (18/44)Counting objects:  43% (19/44)Counting objects:  45% (20/44)Counting objects:  47% (21/44)Counting objects:  50% (22/44)Counting objects:  52% (23/44)Counting objects:  54% (24/44)Counting objects:  56% (25/44)Counting objects:  59% (26/44)Counting objects:  61% (27/44)Counting objects:  63% (28/44)Counting objects:  65% (29/44)Counting objects:  68% (30/44)Counting objects:  70% (31/44)Counting objects:  72% (32/44)Counting objects:  75% (33/44)Counting objects:  77% (34/44)Counting objects:  79% (35/44)Counting objects:  81% (36/44)Counting objects:  84% (37/44)Counting objects:  86% (38/44)Counting objects:  88% (39/44)Counting objects:  90% (40/44)Counting objects:  93% (41/44)Counting objects:  95% (42/44)Counting objects:  97% (43/44)Counting objects: 100% (44/44)Counting objects: 100% (44/44), done.
-Delta compression using up to 16 threads
-Compressing objects:   2% (1/42)Compressing objects:   4% (2/42)Compressing objects:   7% (3/42)Compressing objects:   9% (4/42)Compressing objects:  11% (5/42)Compressing objects:  14% (6/42)Compressing objects:  16% (7/42)Compressing objects:  19% (8/42)Compressing objects:  21% (9/42)Compressing objects:  23% (10/42)Compressing objects:  26% (11/42)Compressing objects:  28% (12/42)Compressing objects:  30% (13/42)Compressing objects:  33% (14/42)Compressing objects:  35% (15/42)Compressing objects:  38% (16/42)Compressing objects:  40% (17/42)Compressing objects:  42% (18/42)Compressing objects:  45% (19/42)Compressing objects:  47% (20/42)Compressing objects:  50% (21/42)Compressing objects:  52% (22/42)Compressing objects:  54% (23/42)Compressing objects:  57% (24/42)Compressing objects:  59% (25/42)Compressing objects:  61% (26/42)Compressing objects:  64% (27/42)Compressing objects:  66% (28/42)Compressing objects:  69% (29/42)Compressing objects:  71% (30/42)Compressing objects:  73% (31/42)Compressing objects:  76% (32/42)Compressing objects:  78% (33/42)Compressing objects:  80% (34/42)Compressing objects:  83% (35/42)Compressing objects:  85% (36/42)Compressing objects:  88% (37/42)Compressing objects:  90% (38/42)Compressing objects:  92% (39/42)Compressing objects:  95% (40/42)Compressing objects:  97% (41/42)Compressing objects: 100% (42/42)Compressing objects: 100% (42/42), done.
-Writing objects:   2% (1/42)Writing objects:   4% (2/42)Writing objects:   7% (3/42)Writing objects:   9% (4/42)Writing objects:  11% (5/42)Writing objects:  16% (7/42)Writing objects:  19% (8/42)Writing objects:  21% (9/42)Writing objects:  26% (11/42)Writing objects:  28% (12/42)Writing objects:  30% (13/42)Writing objects:  33% (14/42)Writing objects:  35% (15/42)Writing objects:  38% (16/42)Writing objects:  40% (17/42)Writing objects:  42% (18/42)Writing objects:  45% (19/42)Writing objects:  47% (20/42)Writing objects:  50% (21/42)Writing objects:  52% (22/42)Writing objects:  54% (23/42)Writing objects:  57% (24/42)Writing objects:  59% (25/42)Writing objects:  61% (26/42)Writing objects:  64% (27/42)Writing objects:  66% (28/42)Writing objects:  69% (29/42), 4.65 MiB | 9.21 MiB/sWriting objects:  71% (30/42), 4.65 MiB | 9.21 MiB/sWriting objects:  73% (31/42), 4.65 MiB | 9.21 MiB/sWriting objects:  76% (32/42), 4.65 MiB | 9.21 MiB/sWriting objects:  78% (33/42), 4.65 MiB | 9.21 MiB/sWriting objects:  80% (34/42), 4.65 MiB | 9.21 MiB/sWriting objects:  83% (35/42), 4.65 MiB | 9.21 MiB/sWriting objects:  85% (36/42), 4.65 MiB | 9.21 MiB/sWriting objects:  88% (37/42), 4.65 MiB | 9.21 MiB/sWriting objects:  90% (38/42), 4.65 MiB | 9.21 MiB/sWriting objects:  92% (39/42), 4.65 MiB | 9.21 MiB/sWriting objects:  97% (41/42), 4.65 MiB | 9.21 MiB/sWriting objects: 100% (42/42), 4.65 MiB | 9.21 MiB/sWriting objects: 100% (42/42), 6.71 MiB | 10.15 MiB/s, done.
-Total 42 (delta 9), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas:   0% (0/9)[Kremote: Resolving deltas:  11% (1/9)[Kremote: Resolving deltas:  22% (2/9)[Kremote: Resolving deltas:  33% (3/9)[Kremote: Resolving deltas:  44% (4/9)[Kremote: Resolving deltas:  55% (5/9)[Kremote: Resolving deltas:  66% (6/9)[Kremote: Resolving deltas:  77% (7/9)[Kremote: Resolving deltas:  88% (8/9)[Kremote: Resolving deltas: 100% (9/9)[Kremote: Resolving deltas: 100% (9/9), done.[K
-To https://github.com/ramonricca/mixtape.git
-   2110df6..33b1856  main -> main
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git add .
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git commit
-[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;61r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[59;130H(B[0;7m[ Reading... ](B[m[59;128H(B[0;7m[ Read 11 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG                                                                                                         [1;271H(B[m[60d(B[0;7m^G(B[m Help[60;19H(B[0;7m^O(B[m Write Out[37G(B[0;7m^W(B[m Where Is[55G(B[0;7m^K(B[m Cut[60;73H(B[0;7m^T(B[m Execute[60;91H(B[0;7m^C(B[m Location[109G(B[0;7mM-U(B[m Undo[60;127H(B[0;7mM-A(B[m Set Mark[145G(B[0;7mM-](B[m To Bracket    (B[0;7mM-Q(B[m Previous[181G(B[0;7m^B(B[m Back[60;199H(B[0;7m^◂(B[m Prev Word[217G(B[0;7m^A(B[m Home[60;235H(B[0;7m^P(B[m Prev Line[253G(B[0;7mM-▴(B[m Scroll Up[61d(B[0;7m^X(B[m Exit[61;19H(B[0;7m^R(B[m Read File[37G(B[0;7m^\(B[m Replace[61;55H(B[0;7m^U(B[m Paste[61;73H(B[0;7m^J(B[m Justify[61;91H(B[0;7m^/(B[m Go To Line     (B[0;7mM-E(B[m Redo[61;127H(B[0;7mM-6(B[m Copy[61;145H(B[0;7m^Q(B[m Where Was[163G(B[0;7mM-W(B[m Next[61;181H(B[0;7m^F(B[m Forward[61;199H(B[0;7m^▸(B[m Next Word[217G(B[0;7m^E(B[m End[61;235H(B[0;7m^N(B[m Next Line[253G(B[0;7mM-▾(B[m Scroll Down[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[38;5;208m       [36mmodified:   typescript[12d#[2d[39m(B[m[?12l[?25h[?25l[1;169H(B[0;7m*[271G(B[m[?12l[?25h[2d:[?25l[?12l[?25hq[?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[59d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                           [60;1H Y(B[m Yes[K[61d(B[0;7m N(B[m No  [61;17H(B[0;7m^C(B[m Cancel[K[59;23H[?12l[?25h[?25l[J[61d[?12l[?25h[61;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git commit
-[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;61r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[59;130H(B[0;7m[ Reading... ](B[m[59;128H(B[0;7m[ Read 14 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG                                                                                                         [1;271H(B[m[60d(B[0;7m^G(B[m Help[60;19H(B[0;7m^O(B[m Write Out[37G(B[0;7m^W(B[m Where Is[55G(B[0;7m^K(B[m Cut[60;73H(B[0;7m^T(B[m Execute[60;91H(B[0;7m^C(B[m Location[109G(B[0;7mM-U(B[m Undo[60;127H(B[0;7mM-A(B[m Set Mark[145G(B[0;7mM-](B[m To Bracket    (B[0;7mM-Q(B[m Previous[181G(B[0;7m^B(B[m Back[60;199H(B[0;7m^◂(B[m Prev Word[217G(B[0;7m^A(B[m Home[60;235H(B[0;7m^P(B[m Prev Line[253G(B[0;7mM-▴(B[m Scroll Up[61d(B[0;7m^X(B[m Exit[61;19H(B[0;7m^R(B[m Read File[37G(B[0;7m^\(B[m Replace[61;55H(B[0;7m^U(B[m Paste[61;73H(B[0;7m^J(B[m Justify[61;91H(B[0;7m^/(B[m Go To Line     (B[0;7mM-E(B[m Redo[61;127H(B[0;7mM-6(B[m Copy[61;145H(B[0;7m^Q(B[m Where Was[163G(B[0;7mM-W(B[m Next[61;181H(B[0;7m^F(B[m Forward[61;199H(B[0;7m^▸(B[m Next Word[217G(B[0;7m^E(B[m End[61;235H(B[0;7m^N(B[m Next Line[253G(B[0;7mM-▾(B[m Scroll Down[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[38;5;208m       [36mmodified:   typescript[12d#[13d# Changes not staged for commit:[14d#[38;5;208m       [36mmodified:   typescript[15d#[2d[39m(B[m[?12l[?25h[?25l[1;169H(B[0;7m*[271G(B[m[?12l[?25h[2dC[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25hr[?25l[?12l[?25he[?25l[?12l[?25hc[?25l[?12l[?25ht[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25he[?25l[?12l[?25hd[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hg[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25hp[?25l[59d[K[?12l[?25h[2;18Ha[?25l[?12l[?25ht[?25l[?12l[?25hh[?25l[?12l[?25h.[?25l7[3;59r8[3dM[1;61r[3;1H[?12l[?25h[?25l[?12l[?25h[?25l[59d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                           [60;1H Y(B[m Yes[K[61d(B[0;7m N(B[m No  [61;17H(B[0;7m^C(B[m Cancel[K[59;23H[?12l[?25h[?25l[60d(B[0;7m^G(B[m Help[60;69H(B[0;7mM-D(B[m DOS Format[60;137H(B[0;7mM-A(B[m Append[60;205H(B[0;7mM-B(B[m Backup File[61d(B[0;7m^C(B[m Cancel[17G         [61;69H(B[0;7mM-M(B[m Mac Format[61;137H(B[0;7mM-P(B[m Prepend[61;205H(B[0;7m^T(B[m Browse[59d(B[0;7mFile Name to Write: /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG(B[m[?12l[?25h[?25l[59;129H[1K (B[0;7m[ Writing... ](B[m[K[1;169H(B[0;7m [271G(B[m[59;128H(B[0;7m[ Wrote 15 lines ](B[m[J[61d[?12l[?25h[61;1H[?1049l[23;0;0t[?1l>[?2004l[K[main 5059b0e] Corrected image path.
- 2 files changed, 322 insertions(+), 2 deletions(-)
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git push
-[?2004lEnumerating objects: 7, done.
-Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
-Delta compression using up to 16 threads
-Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
-Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 5.22 KiB | 5.22 MiB/s, done.
-Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
-To https://github.com/ramonricca/mixtape.git
-   33b1856..5059b0e  main -> main
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git pushcommit[1Padd .
-[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git add .[1Ppushcommit
-[?2004lhint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;61r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[59;130H(B[0;7m[ Reading... ](B[m[59;128H(B[0;7m[ Read 11 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG                                                                                                         [1;271H(B[m[60d(B[0;7m^G(B[m Help[60;19H(B[0;7m^O(B[m Write Out[37G(B[0;7m^W(B[m Where Is[55G(B[0;7m^K(B[m Cut[60;73H(B[0;7m^T(B[m Execute[60;91H(B[0;7m^C(B[m Location[109G(B[0;7mM-U(B[m Undo[60;127H(B[0;7mM-A(B[m Set Mark[145G(B[0;7mM-](B[m To Bracket    (B[0;7mM-Q(B[m Previous[181G(B[0;7m^B(B[m Back[60;199H(B[0;7m^◂(B[m Prev Word[217G(B[0;7m^A(B[m Home[60;235H(B[0;7m^P(B[m Prev Line[253G(B[0;7mM-▴(B[m Scroll Up[61d(B[0;7m^X(B[m Exit[61;19H(B[0;7m^R(B[m Read File[37G(B[0;7m^\(B[m Replace[61;55H(B[0;7m^U(B[m Paste[61;73H(B[0;7m^J(B[m Justify[61;91H(B[0;7m^/(B[m Go To Line     (B[0;7mM-E(B[m Redo[61;127H(B[0;7mM-6(B[m Copy[61;145H(B[0;7m^Q(B[m Where Was[163G(B[0;7mM-W(B[m Next[61;181H(B[0;7m^F(B[m Forward[61;199H(B[0;7m^▸(B[m Next Word[217G(B[0;7m^E(B[m End[61;235H(B[0;7m^N(B[m Next Line[253G(B[0;7mM-▾(B[m Scroll Down[3d[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch main[7d# Your branch is up to date with 'origin/main'.[8d#[9d# Changes to be committed:[10d#[38;5;208m       [36mmodified:   README.md[11d#[38;5;208m       [36mmodified:   typescript[12d#[2d[39m(B[m[?12l[?25h[?25l[1;169H(B[0;7m*[271G(B[m[?12l[?25h[2dN[?25l[?12l[?25ho[?25l[?12l[?25ht[?25l[?12l[?25h [?25l[?12l[?25hq[?25l[?12l[?25hu[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25he[?25l[?12l[?25h.[?25l[?12l[?25h.[?25l[?12l[?25h.[?25l7[3;58r8[3dM[1;61r[3;1H[?12l[?25h[?25l[59d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                           [60;1H Y(B[m Yes[K[61d(B[0;7m N(B[m No  [61;17H(B[0;7m^C(B[m Cancel[K[59;23H[?12l[?25h[?25l[60d(B[0;7m^G(B[m Help[60;69H(B[0;7mM-D(B[m DOS Format[60;137H(B[0;7mM-A(B[m Append[60;205H(B[0;7mM-B(B[m Backup File[61d(B[0;7m^C(B[m Cancel[17G         [61;69H(B[0;7mM-M(B[m Mac Format[61;137H(B[0;7mM-P(B[m Prepend[61;205H(B[0;7m^T(B[m Browse[59d(B[0;7mFile Name to Write: /home/rricca/Documents/GitHub/mixtape/.git/COMMIT_EDITMSG(B[m[?12l[?25h[?25l[59;129H[1K (B[0;7m[ Writing... ](B[m[K[1;169H(B[0;7m [271G(B[m[59;128H(B[0;7m[ Wrote 12 lines ](B[m[J[61d[?12l[?25h[61;1H[?1049l[23;0;0t[?1l>[?2004l[K[main 2bc61c2] Not quite...
- 2 files changed, 25 insertions(+), 2 deletions(-)
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ git push
-[?2004lEnumerating objects: 7, done.
-Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
-Delta compression using up to 16 threads
-Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
-Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 1.02 KiB | 1.02 MiB/s, done.
-Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
-To https://github.com/ramonricca/mixtape.git
-   5059b0e..2bc61c2  main -> main
-[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ exit
-[?2004lexit
-
-Script done on 2025-09-07 12:19:37-04:00 [COMMAND_EXIT_CODE="0"]
