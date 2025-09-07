@@ -1,0 +1,45 @@
+Script started on 2025-09-07 12:02:48-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="272" LINES="61"]
+[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape[00m$ cd convert/
+[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ ls
+[?2004l[0m[01;32mget_beats.pl[0m  [01;32mmultipart2mixtape.pl[0m  [01;32mmusicxml2mixtape.pl[0m  [01;32mparse_voices.pl[0m  README.md  [01;32mreadxml_chord.pl[0m  [01;32mreadxml_measure.pl[0m  [01;32mreadxml.pl[0m  [01;32mreadxml_timepart.pl[0m  [01;32msingle2mixtape.pl[0m  [01;32mtestxml.pl[0m
+[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ cp ~/sounds/*/[K.py .
+[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ l s[K[Ks -ltr
+[?2004ltotal 116
+-rwxr--r-- 1 rricca rricca   656 Sep  7 10:59 [0m[01;32mget_beats.pl[0m
+-rw-r--r-- 1 rricca rricca  1246 Sep  7 10:59 README.md
+-rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmultipart2mixtape.pl[0m
+-rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmusicxml2mixtape.pl[0m
+-rwxr--r-- 1 rricca rricca  2253 Sep  7 10:59 [01;32mparse_voices.pl[0m
+-rwxr--r-- 1 rricca rricca  1481 Sep  7 10:59 [01;32mreadxml.pl[0m
+-rwxr--r-- 1 rricca rricca  1499 Sep  7 10:59 [01;32mreadxml_chord.pl[0m
+-rwxr--r-- 1 rricca rricca  6072 Sep  7 10:59 [01;32mreadxml_measure.pl[0m
+-rwxr--r-- 1 rricca rricca 11955 Sep  7 10:59 [01;32mreadxml_timepart.pl[0m
+-rwxr--r-- 1 rricca rricca 12974 Sep  7 10:59 [01;32msingle2mixtape.pl[0m
+-rwxr--r-- 1 rricca rricca   269 Sep  7 10:59 [01;32mtestxml.pl[0m
+-rwxrw-r-- 1 rricca rricca  5075 Sep  7 12:03 [01;32mmidi2mixtape.py[0m
+-rwxr--r-- 1 rricca rricca   594 Sep  7 12:03 [01;32mmidi2xml.py[0m
+-rwxr--r-- 1 rricca rricca  1076 Sep  7 12:03 [01;32mmusicxml_parser2.py[0m
+-rwxr--r-- 1 rricca rricca  1825 Sep  7 12:03 [01;32mmusicxml_parser.py[0m
+-rwxr--r-- 1 rricca rricca  2012 Sep  7 12:03 [01;32mparse_musicxml_nextgen.py[0m
+-rwxrw-r-- 1 rricca rricca   570 Sep  7 12:03 [01;32mpcm.py[0m
+-rw-rw-r-- 1 rricca rricca  1541 Sep  7 12:03 score2mixtape_expt1.py
+-rwxr--r-- 1 rricca rricca   396 Sep  7 12:03 [01;32mtestmusic21-2.py[0m
+-rwxr--r-- 1 rricca rricca   119 Sep  7 12:03 [01;32mtestmusic21.py[0m
+[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ chmod u+x *
+[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ chmod u-x Re[KA[KEADME.md 
+[?2004l[?2004h]0;rricca@agilestack: ~/Documents/GitHub/mixtape/convert[01;32mrricca@agilestack[00m:[01;34m~/Documents/GitHub/mixtape/convert[00m$ ls -al
+[?2004ltotal 124
+drwxr-xr-x 2 rricca rricca  4096 Sep  7 12:03 [0m[01;34m.[0m
+drwxrwxr-x 6 rricca rricca  4096 Sep  7 12:02 [01;34m..[0m
+-rwxr--r-- 1 rricca rricca   656 Sep  7 10:59 [01;32mget_beats.pl[0m
+-rwxrw-r-- 1 rricca rricca  5075 Sep  7 12:03 [01;32mmidi2mixtape.py[0m
+-rwxr--r-- 1 rricca rricca   594 Sep  7 12:03 [01;32mmidi2xml.py[0m
+-rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmultipart2mixtape.pl[0m
+-rwxr--r-- 1 rricca rricca  6580 Sep  7 10:59 [01;32mmusicxml2mixtape.pl[0m
+-rwxr--r-- 1 rricca rricca  1076 Sep  7 12:03 [01;32mmusicxml_parser2.py[0m
+-rwxr--r-- 1 rricca rricca  1825 Sep  7 12:03 [01;32mmusicxml_parser.py[0m
+-rwxr--r-- 1 rricca rricca  2012 Sep  7 12:03 [01;32mparse_musicxml_nextgen.py[0m
+-rwxr--r-- 1 rricca rricca  2253 Sep  7 10:59 [01;32mparse_voices.pl[0m
+-rwxrw-r-- 1 rricca rricca   570 Sep  7 12:03 [01;32mpcm.py[0m
+-rw-r--r-- 1 rricca rricca  1246 Sep  7 10:59 README.md
+-rwxr--r-- 1 rricca rricca  1499 S
