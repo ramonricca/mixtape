@@ -7,6 +7,7 @@
 #### What is Mixtape?
 
 - 	It is a 4 Voice Electronic Synthesizer
+- 	It uses a Microchip PIC18F47Q83 microcontroller
 - 	4 bit independent VCA with Attack, Decay, Sustain, and Release (ADSR)
 - 	512kbit memory for storing music, plus demos that are always available
 - 	3 buttons to quickly load and play your music into memory
